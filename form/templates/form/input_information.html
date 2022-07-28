@@ -1,0 +1,19 @@
+{% extends "form/base.html" %}
+{% load static %}
+
+{% block content %}
+    <h1>Input Page</h1>
+<button id="add_field">Add Input</button>
+<form method="post" action="">
+    {% csrf_token %}
+    <table id="inputs">
+        <tr>
+            <th> Parameter</th>
+            <th> Value</th>
+        </tr>
+    </table>
+    <button type="submit" > Save </button>
+</form>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock content %}

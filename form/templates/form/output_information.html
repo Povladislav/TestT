@@ -1,0 +1,12 @@
+{% extends "form/base.html" %}
+<h1>Ouput Page</h1>
+{% block content %}
+        <h1>Output Page</h1>
+{% for block in all_data %}
+    <li>{{ block.data }}</li>
+{% endfor %}
+<form method="post">
+    {% csrf_token %}
+    <button> Delete all </button>
+</form>
+{% endblock content %}
